@@ -1,0 +1,132 @@
+resourcePath: /reports
+description: Reports
+apis:
+
+- path: /reports
+  operations:
+
+  - httpMethod: GET
+    summary: Get all reports
+    notes: Returns array of reports
+
+    parameters:
+    - name: Authorization
+      dataType: string
+      paramType: header
+      required: true
+      description: auth token
+
+  - httpMethod: POST
+    summary: Create report
+    notes: Returns new report
+    responseClass: Report
+    parameters:
+
+    - name: Authorization
+      dataType: string
+      paramType: header
+      required: true
+      description: auth token
+
+    - name: date
+      dataType: string
+      paramType: form
+      required: true
+      description: Report date
+
+    - name: timeTaken
+      dataType: number
+      paramType: form
+      required: true
+      description: Last Name
+
+    - name: description
+      dataType: string
+      paramType: form
+      required: true
+      description: Email
+
+- path: /reports/{report_id}
+  operations:
+
+  - httpMethod: GET
+    summary: Get report by id
+    notes: Returns report
+    responseClass: Report
+
+    parameters:
+    - name: Authorization
+      dataType: string
+      paramType: header
+      required: true
+      description: auth token
+    - name: report_id
+      dataType: string
+      paramType: path
+      required: true
+      description: Report id
+
+  - httpMethod: PUT
+    summary: Update report by id
+    notes: Returns report
+    responseClass: Report
+
+    parameters:
+    - name: Authorization
+      dataType: string
+      paramType: header
+      required: true
+      description: auth token
+
+    - name: report_id
+      dataType: string
+      paramType: path
+      required: true
+      description: Report id
+
+    - name: date
+      dataType: string
+      paramType: form
+      required: true
+      description: Report date
+
+    - name: timeTaken
+      dataType: number
+      paramType: form
+      required: true
+      description: Last Name
+
+    - name: description
+      dataType: string
+      paramType: form
+      required: true
+      description: Email
+
+  - httpMethod: DELETE
+    summary: Destroy report
+    notes: Destroy report
+
+    parameters:
+    - name: Authorization
+      dataType: string
+      paramType: header
+      required: true
+      description: auth token
+    - name: report_id
+      dataType: string
+      paramType: path
+      required: true
+      description: Report id
+
+models:
+  Report:
+    id: Report
+    properties:
+      id:
+        type: String
+      date:
+        type: Date
+      timeTaken:
+        type: Number
+      description:
+        type: String

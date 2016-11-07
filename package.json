@@ -1,0 +1,38 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "6.6.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "0.8.7",
+    "chai": "3.5.0",
+    "chai-http": "3.0.0",
+    "dotenv": "2.0.0",
+    "faker": "3.1.0",
+    "glob": "7.1.0",
+    "koa": "1.2.4",
+    "koa-bodyparser": "2.2.0",
+    "koa-cors": "0.0.16",
+    "koa-jwt": "1.2.0",
+    "koa-logger": "1.3.0",
+    "koa-roles": "1.0.2",
+    "koa-router": "5.4.0",
+    "koa-validate": "1.0.7",
+    "mongoose": "4.6.1",
+    "mongoose-timestamp": "0.6.0",
+    "mongoose-unique-validator": "1.0.2",
+    "mongoose-validator": "1.2.5",
+    "monky": "0.6.10",
+    "swagger-koa": "^1.0.10",
+    "validator": "5.7.0"
+  }
+}

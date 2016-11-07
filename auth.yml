@@ -1,0 +1,71 @@
+resourcePath: /auth
+description: Auth
+apis:
+
+- path: /auth/sign-up
+  operations:
+
+  - httpMethod: POST
+    summary: Sign-up
+    notes: Returns new user
+    responseClass: User
+    parameters:
+
+    - name: firstName
+      dataType: string
+      paramType: form
+      required: true
+      description: First Name
+
+    - name: lastName
+      dataType: string
+      paramType: form
+      required: true
+      description: Last Name
+
+    - name: email
+      dataType: string
+      paramType: form
+      required: true
+      description: Email
+
+    - name: password
+      dataType: string
+      paramType: form
+      required: true
+      description: Password
+
+- path: /auth/sign-in
+  operations:
+
+  - httpMethod: POST
+    summary: Sign-in
+    notes: Returns token
+    parameters:
+
+    - name: email
+      dataType: string
+      paramType: form
+      required: true
+      description: Email
+
+    - name: password
+      dataType: string
+      paramType: form
+      required: true
+      description: Password
+
+models:
+  User:
+    id: User
+    properties:
+      id:
+        type: String
+      firstName:
+        type: String
+      lastName:
+        type: String
+      email:
+        type: String
+      role:
+        type: String
