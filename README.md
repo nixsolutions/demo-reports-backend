@@ -3,8 +3,8 @@ Koa Demo API - Simple reports manager
 
 API for ["Angular 2.0 Demo Application - Simple reports manager"](https://github.com/nixsolutions/demo-reports-frontend).
 
-Demo works with Koa.js on backend to provide API calls for Frontend part. 
-[Demo](https://koa-reports-api.herokuapp.com/swagger/). uses Swagger for UI interaction and testing API.
+The demo works with Koa.js on the backend to provide API calls for the Frontend part. The application uses Swagger for UI interaction and API testing. Each call has the following description: implementation notes, parameters, response messages.
+[Demo](https://koa-reports-api.herokuapp.com/swagger/)
 
 Features
 --------
